@@ -24,7 +24,7 @@ Terminal-based applications require highly robust console I/O handling to preven
 
 ```mermaid
 flowchart TD
-    START([Application Entry `main()`]) --> INIT[Question Bank Initialization]
+    START(["Application Entry: main()"]) --> INIT[Question Bank Initialization]
     
     INIT --> LOOP_RENDER[Loop: Render Question & Options]
     LOOP_RENDER --> INPUT[Capture User Input Stream]
