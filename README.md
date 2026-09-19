@@ -1,4 +1,4 @@
-# P19: Interactive Terminal Quiz Game (C/C++)
+﻿# Interactive Terminal Quiz Game (C/C++)
 
 ![C / C++](https://img.shields.io/badge/Language-C_%2F_C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
 ![Compiler](https://img.shields.io/badge/Compiler-GCC_%2F_MinGW-A8B9CC?style=for-the-badge)
