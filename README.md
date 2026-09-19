@@ -22,7 +22,7 @@ Terminal-based applications require highly robust console I/O handling to preven
 
 ## Software Architecture Flowchart
 
-mermaid
+```mermaid
 flowchart TD
     START(["Application Entry: main()"]) --> INIT["Question Bank Initialization"]
     
@@ -44,22 +44,22 @@ flowchart TD
     COND -->|No| METRICS["Generate Final Grade Report \n& Performance Metrics"]
     
     METRICS --> EXIT(["Exit 0"])
-
+```
 
 ## Algorithmic & Mathematical Modeling
 
 ### 1. Accuracy Evaluation Metric
 At the termination of the game loop, the final percentage accuracy ($S$) is calculated using integer/float casted arithmetic:
-$$S = \left(\frac{"N_{correct"}}{N_{"total"}}\right) \times 100\%$$
+$$S = \left(\frac{N_{correct}}{N_{total}}\right) \times 100\%$$
 
 ### 2. Algorithmic Complexity
 The engine operates predictably across finite sets:
-$$\text{"Time Complexity: "} \mathcal{"O"}(N) \quad (\text{"linear traversal across "} N \text{" questions"})$$
-$$\text{"Auxiliary Space Complexity: "} \mathcal{"O"}(1) \quad (\text{"static stack-allocated memory footprint"})$$
+$$\text{Time Complexity: } \mathcal{O}(N) \quad (\text{linear traversal across } N \text{ questions})$$
+$$\text{Auxiliary Space Complexity: } \mathcal{O}(1) \quad (\text{static stack-allocated memory footprint})$$
 
 ### 3. State Transition Validation Logic
 User input bounds checking is evaluated using strict boolean constraints to filter the character domain:
-$$\text{"Input "} c \in \{\text{"'A'"}, \text{"'B'"}, \text{"'C'"}, \text{"'D'"}\} \lor \{\text{"'a'"}, \text{"'b'"}, \text{"'c'"}, \text{"'d'"}\} \implies \text{"Valid"}$$
+$$\text{Input } c \in \{\text{'A'}, \text{'B'}, \text{'C'}, \text{'D'}\} \lor \{\text{'a'}, \text{'b'}, \text{'c'}, \text{'d'}\} \implies \text{Valid}$$
 *(Any character failing this proposition triggers an input loop retry without altering the game state).*
 
 ## Build & Compilation Matrix
@@ -91,11 +91,11 @@ g++ -O2 "src/PROJECT OF A Quiz Game .cxx" -o bin/quiz_game_cpp.exe
 ```
 
 ## Authentic Artifacts Catalog
-- **Source Code Implementation**: Located in ["`src/`"](src/).
-- **Original Project Presentations & Exports**: Securely archived in ["`docs/`"](docs/).
+- **Source Code Implementation**: Located in [`src/`](src/).
+- **Original Project Presentations & Exports**: Securely archived in [`docs/`](docs/).
 
 ## Engineering Audit & Defensibility
-- **Static vs. Dynamic Scalability**: Currently, questions are hardcoded in static arrays within the source files. While highly efficient for $\mathcal{"O"}(1)$ memory constraints on embedded systems, a scalable desktop application should transition to file I/O operations, dynamically parsing `.csv` or `.json` structures into heap-allocated linked lists.
+- **Static vs. Dynamic Scalability**: Currently, questions are hardcoded in static arrays within the source files. While highly efficient for $\mathcal{O}(1)$ memory constraints on embedded systems, a scalable desktop application should transition to file I/O operations, dynamically parsing `.csv` or `.json` structures into heap-allocated linked lists.
 - **Cross-Platform Compatibility**: Formatting terminal output natively via Windows API (`<windows.h>`, `system("cls")`) breaks POSIX compatibility. Abstracting these calls via preprocessor directives (`#ifdef _WIN32`) is recommended to ensure seamless compilation across Linux and macOS environments.
 
 ---
@@ -105,4 +105,4 @@ Mechatronics Engineer | Mechanical Design & CAD (SolidWorks & AutoCAD) | Prevent
 [GitHub](https://github.com/Hassan-Moqbel) · [Facebook](https://www.facebook.com/share/1BqxAgVjHi/) · [LinkedIn](https://www.linkedin.com/in/hassan-moqbel)
 
 ## License
-This project is licensed under the ["MIT License"](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
